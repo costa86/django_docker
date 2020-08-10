@@ -3,7 +3,7 @@
 
 git add .
 
-git -m cool
+git commit -m cool
 
 git push
 
