@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 git add .
 
 echo Message:
@@ -11,4 +10,4 @@ git commit -m $msg
 
 git push
 
-notify-send "commit $(msg)"
+notify-send "commit ${msg}"
