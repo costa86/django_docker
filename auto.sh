@@ -3,8 +3,12 @@
 
 git add .
 
-git commit -m cool
+echo Message:
+
+read msg
+
+git commit -m $msg
 
 git push
 
-notify-send "Hello world $(whoami)"
+notify-send "commit $(msg)"
