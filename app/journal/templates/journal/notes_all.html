@@ -2,7 +2,16 @@
 
 {% block content %}
 <h1>Notes</h1>
+<a href="{% url 'note_add' %}">New note</a>
 {% for i in records %}
-<h1>{{i.title}}</h1>
+<h1>{{i.title}}
+    <a href="{% url 'note_edit' pk=i.pk %}">
+        <button>Edit</button>
+    </a>
+    
+    <a href="{% url 'note_delete' pk=i.pk %}">
+        <button>Delete</button>
+    </a>
+</h1>
 {% endfor %}
 {% endblock %}
