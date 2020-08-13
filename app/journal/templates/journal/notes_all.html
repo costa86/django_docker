@@ -1,0 +1,8 @@
+{% extends "journal/base.html" %}
+
+{% block content %}
+<h1>Notes</h1>
+{% for i in records %}
+<h1>{{i.title}}</h1>
+{% endfor %}
+{% endblock %}
