@@ -1,17 +1,36 @@
 {% extends "journal/base.html" %}
 
+{% block heading %}
+<div class="heading">
+    <h1>All the notes</h1>
+
+</div>
+{% endblock %}
+
 {% block content %}
-<h1>Notes</h1>
-<a href="{% url 'note_add' %}">New note</a>
-{% for i in records %}
-<h1>{{i.title}}
-    <a href="{% url 'note_edit' pk=i.pk %}">
-        <button>Edit</button>
-    </a>
-    
-    <a href="{% url 'note_delete' pk=i.pk %}">
-        <button>Delete</button>
-    </a>
-</h1>
-{% endfor %}
+
+<div class="notes">
+    {% for i in records %}
+
+    <div class="card">
+        <h1>{{i.title}}
+            <p>{{i.text}}</p>
+            <div class="card-buttons">
+                <a href="{% url 'note_edit' pk=i.pk %}">
+                    <button class="btn-edit">EDIT</button>
+                </a>
+
+                <a href="{% url 'note_delete' pk=i.pk %}">
+                    <button class="btn-delete">DELETE</button>
+                </a>
+            </div>
+
+        </h1>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+
 {% endblock %}

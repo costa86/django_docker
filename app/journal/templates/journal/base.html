@@ -7,20 +7,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
     <nav>
         <div>
-            <h3>LOGO</h3>
+            <a href="{% url 'notes_all' %}">LOGO</a>
         </div>
 
         <input type="checkbox" name="" id="check">
 
         <div id="links">
-            <a href="{% url 'notes_all' %}">Show Notes</a>
-            <a href="{% url 'note_add' %}">Add Note</a>
+            <a href="{% url 'notes_all' %}">SHOW NOTES</a>
+            <a href="{% url 'note_add' %}">ADD NOTE</a>
 
         </div>
 
@@ -28,7 +30,10 @@
             <img src="https://img.icons8.com/doodle/48/000000/menu.png" />
         </label>
     </nav>
-    <h2>My project</h2>
+
+    {% block heading %}
+    {% endblock %}
+
     {% block content %}
     {% endblock %}
 

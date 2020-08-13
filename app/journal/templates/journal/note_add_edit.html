@@ -1,11 +1,17 @@
 {% extends "journal/base.html" %}
 
+{% block heading %}
+<div class="heading">
+    <h1>New Note</h1>
+
+</div>
+{% endblock %}
+
 {% block content %}
-<h1>New Note</h1>
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">SAVE</button>
+    <button class="btn-save" type="submit">SAVE</button>
 
 </form>
 {% endblock %}

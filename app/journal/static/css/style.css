@@ -4,6 +4,59 @@
   color: black;
 }
 
+.heading {
+  text-align: center;
+}
+
+form input, form textarea {
+  font-size: larger;
+}
+
+body {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-buttons {
+  visibility: hidden;
+}
+
+.btn-delete {
+  background-color: red;
+  color: white;
+}
+
+.btn-edit {
+  background-color: orange;
+  color: black;
+}
+
+.btn-save {
+  background-color: blue;
+  color: white;
+}
+
+.card {
+  margin: 5px;
+  border: 3px solid;
+  padding: 5px;
+  background-color: lightblue;
+}
+
+.card:hover .card-buttons {
+  visibility: visible;
+}
+
 nav {
   background-color: yellow;
   padding: 10px;
