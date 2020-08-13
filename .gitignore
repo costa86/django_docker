@@ -6,4 +6,8 @@
 *.pyc
 
 .DS_Store
+#dev scripts
+py3.sh
+watch_sass.sh
 
+.vscode
