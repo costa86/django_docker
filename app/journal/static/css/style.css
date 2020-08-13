@@ -1,3 +1,57 @@
-body {
-  background-color: green;
+* {
+  margin: 0;
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  background-color: yellow;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav #menu {
+  cursor: pointer;
+  display: none;
+}
+
+nav a {
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: larger;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: blue;
+  color: white;
+}
+
+nav #check {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  nav #links {
+    position: absolute;
+    top: 75px;
+    left: -110%;
+    text-align: center;
+    background-color: yellowgreen;
+    padding: 10px;
+    width: 100%;
+    transition: 0.5s;
+  }
+  nav a {
+    display: block;
+  }
+  nav #menu {
+    display: block;
+  }
+  nav #check:checked ~ #links {
+    left: 0;
+  }
 }

@@ -2,21 +2,36 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My project</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
     <nav>
-        <a href="#">VIEW NOTES</a>
-        <a href="#">NEW NOTE</a>
-        <a href="#">LINK 3</a>
+        <div>
+            <h3>LOGO</h3>
+        </div>
+
+        <input type="checkbox" name="" id="check">
+
+        <div id="links">
+            <a href="{% url 'notes_all' %}">Show Notes</a>
+            <a href="{% url 'note_add' %}">Add Note</a>
+
+        </div>
+
+        <label id="menu" for="check">
+            <img src="https://img.icons8.com/doodle/48/000000/menu.png" />
+        </label>
     </nav>
     <h2>My project</h2>
     {% block content %}
     {% endblock %}
-    
+
 </body>
+
 </html>
