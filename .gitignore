@@ -3,7 +3,7 @@
 
 #extensions
 *.sqlite3
-*.pyc
+*.py[co]	
 *.sh
 
 .DS_Store
@@ -14,3 +14,4 @@
 .vscode
 
 __pycache__
+migrations
