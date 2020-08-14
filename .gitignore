@@ -5,11 +5,11 @@
 *.sqlite3
 *.py[co]	
 *.sh
-
 .DS_Store
 
 #exeptions
 !start.sh
+!README.md
 
 .vscode
 
