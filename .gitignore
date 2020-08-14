@@ -4,10 +4,13 @@
 #extensions
 *.sqlite3
 *.pyc
+*.sh
 
 .DS_Store
-#dev scripts
-py3.sh
-watch_sass.sh
+
+#exeptions
+!start.sh
 
 .vscode
+
+__pycache__
