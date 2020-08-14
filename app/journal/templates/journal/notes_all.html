@@ -1,4 +1,6 @@
+
 {% extends "journal/base.html" %}
+{% load humanize %}
 
 {% block heading %}
 <div class="heading">
@@ -13,23 +15,22 @@
     {% for i in records %}
 
     <div class="card">
-        <h1>{{i.title}}
-            <p>{{i.text}}</p>
-            {% if user.is_authenticated %}
-            <div class="card-buttons">
-                <a href="{% url 'note_edit' pk=i.pk %}">
-                    <button class="btn-edit">EDIT</button>
-                </a>
+        <h1>{{ i.title }}</h1>
+        <h4>{{i.text}}</h4>
+        {% if user.is_authenticated %}
+        <div class="card-buttons">
+            <a href="{% url 'note_edit' pk=i.pk %}">
+                <button class="btn-edit">EDIT</button>
+            </a>
 
-                <a href="{% url 'note_delete' pk=i.pk %}">
-                    <button class="btn-delete">DELETE</button>
-                </a>
-            </div>
-            {% endif %}
+            <a href="{% url 'note_delete' pk=i.pk %}">
+                <button class="btn-delete">DELETE</button>
+            </a>
+        </div>
+        {% endif %}
+        <h5>{{ i.created }} ({{ i.created | naturalday }})</h5>
 
-        </h1>
     </div>
-
     {% endfor %}
 
 </div>
