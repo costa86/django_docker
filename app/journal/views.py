@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from . models import Note
 from . forms import NoteForm
+from django.contrib.auth.decorators import login_required
 
 templates = {
     "all": "journal/notes_all.html",
@@ -19,7 +20,7 @@ def note_delete(request, pk):
     record.delete()
     return redirect("notes_all")
 
-
+@login_required
 def note_add(request):
     if request.method == "POST":
         form = NoteForm(request.POST)

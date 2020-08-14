@@ -22,8 +22,9 @@
 
         <div id="links">
             <a href="{% url 'notes_all' %}">SHOW NOTES</a>
+            {% if user.is_authenticated %}
             <a href="{% url 'note_add' %}">ADD NOTE</a>
-
+            {% endif %}
         </div>
 
         <label id="menu" for="check">
