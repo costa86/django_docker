@@ -8,7 +8,8 @@
 #*.prod
 
 #exeptions
-!start.sh
+!start_docker.sh
+!build.sh
 
 .vscode
 .DS_Store
