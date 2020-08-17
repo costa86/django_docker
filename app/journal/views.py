@@ -9,6 +9,8 @@ templates = {
     "edit": "journal/note_add_edit.html"
 }
 
+def view_map(request):
+    return render(request,template_name="journal/view_map.html")
 
 def notes_all(request):
     records = Note.objects.all()

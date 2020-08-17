@@ -1,0 +1,16 @@
+html,
+body,
+#viewDiv {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+.esri-view .esri-directions {
+	position: fixed;
+	right: 15px;
+	max-height: calc(100% - 45px) !important;
+}
+.esri-view .esri-component.esri-attribution {
+	position: fixed;
+}

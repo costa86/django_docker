@@ -1,10 +1,11 @@
 #prod files
-*prod*
+#*prod*
 
 #extensions
 *.sqlite3
 *.py[co]	
 *.sh
+#*.prod
 
 #exeptions
 !start.sh
