@@ -6,11 +6,14 @@ from django.contrib.auth.decorators import login_required
 templates = {
     "all": "journal/notes_all.html",
     "add": "journal/note_add_edit.html",
-    "edit": "journal/note_add_edit.html"
+    "edit": "journal/note_add_edit.html",
+    "map": "journal/view_map.html",
 }
 
-def view_map(request):
-    return render(request,template_name="journal/view_map.html")
+def map_view(request,id):
+    title = "Map (Navigate to)" if id == 1 else "Map (find my location)"
+    return render(request,templates["map"],{"id":id})
+    
 
 def notes_all(request):
     records = Note.objects.all()
