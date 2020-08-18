@@ -1,0 +1,31 @@
+{% extends "journal/base.html" %}
+{% load static %}
+
+{% block head %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Restricted areas in {{ area }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_map.css' %}">
+
+</head>
+
+{% endblock %}
+
+{% block heading %}
+
+<div class="heading">
+    <h1>Restricted flying areas in {{ area }}</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="viewDiv"></div>
+<script src="https://js.arcgis.com/4.15/"></script>
+<script type="module" src="{% static 'js/restricted_areas.js' %}"></script>
+
+{% endblock %}

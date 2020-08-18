@@ -9,15 +9,27 @@ templates = {
     "edit": "journal/note_add_edit.html",
     "map": "journal/view_map.html",
     "drone": "journal/drone.html",
+    "restricted": "journal/restricted_area.html",
 }
 
-def drone(request):
-    return render(request,templates["drone"])
+areas = {
+    0: "Lisbon",
+    1: "Porto"
+}
 
-def map_view(request,id):
+
+def restricted(request, area_id):
+    return render(request, templates["restricted"], {"area": areas[area_id]})
+
+
+def drone(request):
+    return render(request, templates["drone"])
+
+
+def map_view(request, id):
     title = "Map (Navigate to)" if id == 1 else "Map (find my location)"
-    return render(request,templates["map"],{"id":id})
-    
+    return render(request, templates["map"], {"id": id})
+
 
 def notes_all(request):
     records = Note.objects.all()
@@ -28,6 +40,7 @@ def note_delete(request, pk):
     record = get_object_or_404(Note, pk=pk)
     record.delete()
     return redirect("notes_all")
+
 
 @login_required
 def note_add(request):
