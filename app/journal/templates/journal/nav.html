@@ -9,6 +9,9 @@
         <a href="{% url 'notes_all' %}">SHOW NOTES</a>
         <a href="{% url 'map_view' id=0 %}">VIEW MAP</a>
         <a href="{% url 'map_view' id=1 %}">NAVIGATION</a>
+        <a href="{% url 'drone' %}">DRONE</a>
+
+        <a href="/admin">LOGIN</a>
 
 
         {% if user.is_authenticated %}

@@ -1,5 +1,5 @@
 #prod files
-#*prod*
+*prod*
 
 #extensions
 *.sqlite3

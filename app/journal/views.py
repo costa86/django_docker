@@ -8,7 +8,11 @@ templates = {
     "add": "journal/note_add_edit.html",
     "edit": "journal/note_add_edit.html",
     "map": "journal/view_map.html",
+    "drone": "journal/drone.html",
 }
+
+def drone(request):
+    return render(request,templates["drone"])
 
 def map_view(request,id):
     title = "Map (Navigate to)" if id == 1 else "Map (find my location)"

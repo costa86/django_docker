@@ -1,18 +1,20 @@
 * {
 	margin: 0;
 	text-decoration: none;
-    color: black;
+	color: black;
 }
-.heading{
-    text-align: center;
+.heading {
+	text-align: center;
 }
 
-form{
-    input, textarea{
-        font-size: larger;
-    }
-
+form {
+	input,
+	textarea {
+		font-size: larger;
+	}
 }
+
+
 
 body {
 	font-family: 'Gloria Hallelujah', cursive;
@@ -27,10 +29,14 @@ button {
 	padding: 10px;
 	border-radius: 5px;
 	cursor: pointer;
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
 }
 
 .card-buttons {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 .btn-delete {
@@ -41,20 +47,20 @@ button {
 	background-color: orange;
 	color: black;
 }
-.btn-save{
-    background-color: blue;
-    color: white;
+.btn-save {
+	background-color: blue;
+	color: white;
 }
 
 .card {
 	margin: 5px;
 	border: 3px solid;
 	padding: 5px;
-	background-color: lime;
+	background-color: goldenrod;
 	&:hover {
-		background-color: lightcyan;
+		background-color: yellow;
 		.card-buttons {
-            visibility: visible;
+			visibility: visible;
 		}
 	}
 }
