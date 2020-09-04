@@ -1,0 +1,10 @@
+SECRET_KEY=foo
+DEBUG=True
+ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+
+SQL_NAME=postgres
+SQL_ENGINE=django.db.backends.postgresql
+SQL_USER=costa
+SQL_PASSWORD=docker
+SQL_PORT=5432
+SQL_HOST=localhost

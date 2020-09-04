@@ -18,7 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     "journal",
-    'django_sass'
+    #'django_sass'
 
 ]
 
